@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Hakathon\\back-end\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{140ADE08-DE5A-4058-92F4-4CF90941BF8F}|App.BLL\\App.BLL.csproj|d:\\hakathon\\back-end\\app.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140ADE08-DE5A-4058-92F4-4CF90941BF8F}|App.BLL\\App.BLL.csproj|solutionrelative:app.bll\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DA71A78-A28F-8F84-EF7E-17686113D26D}|App.API\\App.API.csproj|d:\\hakathon\\back-end\\app.api\\adddependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DA71A78-A28F-8F84-EF7E-17686113D26D}|App.API\\App.API.csproj|solutionrelative:app.api\\adddependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140ADE08-DE5A-4058-92F4-4CF90941BF8F}|App.BLL\\App.BLL.csproj|d:\\hakathon\\back-end\\app.bll\\contracts\\auth\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140ADE08-DE5A-4058-92F4-4CF90941BF8F}|App.BLL\\App.BLL.csproj|solutionrelative:app.bll\\contracts\\auth\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DA71A78-A28F-8F84-EF7E-17686113D26D}|App.API\\App.API.csproj|d:\\hakathon\\back-end\\app.api\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DA71A78-A28F-8F84-EF7E-17686113D26D}|App.API\\App.API.csproj|solutionrelative:app.api\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterRequestValidator.cs",
+              "DocumentMoniker": "D:\\Hakathon\\back-end\\App.BLL\\Contracts\\Auth\\Validators\\RegisterRequestValidator.cs",
+              "RelativeDocumentMoniker": "App.BLL\\Contracts\\Auth\\Validators\\RegisterRequestValidator.cs",
+              "ToolTip": "D:\\Hakathon\\back-end\\App.BLL\\Contracts\\Auth\\Validators\\RegisterRequestValidator.cs",
+              "RelativeToolTip": "App.BLL\\Contracts\\Auth\\Validators\\RegisterRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T11:38:56.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddDependencyInjection.cs",
+              "DocumentMoniker": "D:\\Hakathon\\back-end\\App.API\\AddDependencyInjection.cs",
+              "RelativeDocumentMoniker": "App.API\\AddDependencyInjection.cs",
+              "ToolTip": "D:\\Hakathon\\back-end\\App.API\\AddDependencyInjection.cs",
+              "RelativeToolTip": "App.API\\AddDependencyInjection.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwGwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T11:30:21.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Hakathon\\back-end\\App.BLL\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "App.BLL\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Hakathon\\back-end\\App.BLL\\Services\\AuthService.cs",
+              "RelativeToolTip": "App.BLL\\Services\\AuthService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEMAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T11:26:58.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Hakathon\\back-end\\App.API\\Controllers\\Auth\\AuthController.cs",
+              "RelativeDocumentMoniker": "App.API\\Controllers\\Auth\\AuthController.cs",
+              "ToolTip": "D:\\Hakathon\\back-end\\App.API\\Controllers\\Auth\\AuthController.cs",
+              "RelativeToolTip": "App.API\\Controllers\\Auth\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T11:23:06.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.csproj.AssemblyReference.cache
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.AssemblyInfoInputs.cache
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.AssemblyInfo.cs
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.csproj.CoreCompileInputs.cache
+D:\Hakathon\back-end\App.Domain\bin\Debug\net10.0\App.Domain.deps.json
+D:\Hakathon\back-end\App.Domain\bin\Debug\net10.0\App.Domain.dll
+D:\Hakathon\back-end\App.Domain\bin\Debug\net10.0\App.Domain.pdb
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.dll
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\refint\App.Domain.dll
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\App.Domain.pdb
+D:\Hakathon\back-end\App.Domain\obj\Debug\net10.0\ref\App.Domain.dll
