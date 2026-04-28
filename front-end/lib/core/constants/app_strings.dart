@@ -1,0 +1,41 @@
+﻿class AppStrings {
+  AppStrings._();
+
+  static const String appName          = 'KidBridge AI';
+  static const String tagline          = "Unlock your child's superpowers!";
+  static const String startJourney     = 'Start My Journey';
+  static const String iveBeenBefore    = "I've been here before";
+  static const String continueGoogle   = 'Continue with Google';
+  static const String letsBackTo       = "Let's Back To";
+  static const String parentAccount    = 'Parent Account';
+  static const String emailAddress     = 'Email Address';
+  static const String password         = 'Password';
+  static const String rememberMe       = 'Remember me, Keep me in';
+  static const String join             = 'Join';
+  static const String firstTimeReg     = 'First Time ?! Register';
+  static const String letsGetStarted   = "Let's get started!";
+  static const String createParentAcc  = 'Create Your Parent Account';
+  static const String fullName         = 'Full Name';
+  static const String mobileNumber     = 'Mobile Number';
+  static const String continueBtn      = 'Continue';
+  static const String alreadyHaveAcc   = 'Already have an account? Log In';
+  static const String checkYourPhone   = 'Check your phone!';
+  static const String enterDigitCode   = 'Enter your 4-digit code';
+  static const String resendCode       = 'Resend Code';
+  static const String verify           = 'Verify';
+  static const String whoIsPlaying     = 'Who is playing?';
+  static const String childName        = "Child's Name";
+  static const String howOldAreThey   = 'How old are they?';
+  static const String pickAvatar       = 'Pick an Avatar';
+  static const String childSecretPin   = "Child's Secret PIN";
+  static const String parentalControls = 'Parental Controls';
+  static const String setDailyGoals    = 'Set Daily Goals';
+  static const String dailyTimeLimit   = 'Daily Time Limit';
+  static const String bedtimeLock      = 'Bedtime Lock';
+  static const String finishSetup      = 'Finish Setup';
+  static const String theBigMission    = 'The Big Mission';
+  static const String letsPlay         = "LET'S PLAY!";
+  static const String missionComplete  = 'MISSION COMPLETE!';
+  static const String youreAllSet      = "You're All Set!";
+  static const String enterParentDash  = 'Enter Parent Dashboard';
+}
