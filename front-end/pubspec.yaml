@@ -37,6 +37,7 @@ dependencies:
 
   # Font
   google_fonts: ^6.1.0
+
   #API
   retrofit: ^4.1.0
   json_annotation: ^4.8.1

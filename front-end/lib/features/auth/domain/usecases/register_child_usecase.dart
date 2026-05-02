@@ -1,19 +1,21 @@
 import '../repositories/auth_repository.dart';
 
-class RegisterUseCase {
+class RegisterChildUseCase {
   final AuthRepository repository;
 
-  RegisterUseCase(this.repository);
+  RegisterChildUseCase(this.repository);
 
   Future<void> call({
-    required String fullName,
+    required String name,
     required String email,
     required String password,
+    required String avatar,
   }) {
-    return repository.register(
-      fullName: fullName,
+    return repository.registerChild(
+      name: name,
       email: email,
       password: password,
+      avatar: avatar,
     );
   }
 }
