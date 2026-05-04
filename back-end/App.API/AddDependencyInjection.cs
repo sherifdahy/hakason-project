@@ -3,10 +3,13 @@ using App.BLL.ClassOptions;
 using App.BLL.Providers;
 using App.BLL.Services;
 using App.DAL.Data;
+using App.Domain.ClassOptions;
 using App.Domain.Entities.Identity;
+using App.Domain.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -31,6 +34,14 @@ public static class AddDependencyInjection
     {
         services.AddScoped<IAuthService, AuthService>();
         services.AddTransient<IJwtProvider, JwtProvider>();
+        services.AddTransient<IEmailSender, EmailService>();
+        services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IInvitationService, InvitationService>();
+
+        services.AddOptions<MailSettings>()
+            .BindConfiguration(nameof(MailSettings))
+            .ValidateDataAnnotations()
+            .ValidateOnStart();
 
         return services;
 
@@ -60,7 +71,10 @@ public static class AddDependencyInjection
 
     private static IServiceCollection AddIdentityConfig(this IServiceCollection services)
     {
-        services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+        services.AddIdentity<ApplicationUser, ApplicationRole>(options=>
+        {
+            options.SignIn.RequireConfirmedEmail = true;
+        }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
         return services;
     }
     private static IServiceCollection AddCorsConfig(this IServiceCollection services)

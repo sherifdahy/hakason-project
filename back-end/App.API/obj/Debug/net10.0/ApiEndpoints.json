@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "App.API.Controllers.Account.AccountController",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/Account/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Auth.AuthController",
+    "Method": "ConfirmEmail",
+    "RelativePath": "api/Auth/confirm-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "App.Domain.Contracts.Auth.Requests.ConfirmEmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "App.API.Controllers.Auth.AuthController",
     "Method": "GetToken",
     "RelativePath": "api/Auth/get-token",
@@ -9,7 +35,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "App.BLL.Contracts.Auth.Requests.GetTokenRequest",
+        "Type": "App.Domain.Contracts.Auth.Requests.GetTokenRequest",
         "IsRequired": true
       }
     ],
@@ -17,15 +43,100 @@
   },
   {
     "ContainingType": "App.API.Controllers.Auth.AuthController",
-    "Method": "Register",
-    "RelativePath": "api/Auth/register",
+    "Method": "RegisterChild",
+    "RelativePath": "api/Auth/register-child",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "App.BLL.Contracts.Auth.Requests.RegisterRequest",
+        "Type": "App.Domain.Contracts.Auth.Requests.RegisterChildRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Auth.AuthController",
+    "Method": "RegisterParent",
+    "RelativePath": "api/Auth/register-parent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "App.Domain.Contracts.Auth.Requests.RegisterParentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Auth.AuthController",
+    "Method": "ResentConfirmation",
+    "RelativePath": "api/Auth/resend-confirmation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "App.Domain.Contracts.Auth.Requests.ResendConfirmRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Parents.ParentsController",
+    "Method": "Invite",
+    "RelativePath": "api/Parents/{parentId}/invitations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "App.Domain.Contracts.Invitations.Requests.InviteChildRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Parents.ParentsController",
+    "Method": "GetMyInvitations",
+    "RelativePath": "api/Parents/{parentId}/invitations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "parentId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.Parents.ParentsController",
+    "Method": "Cancel",
+    "RelativePath": "api/Parents/invitations/{id}/cancel",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

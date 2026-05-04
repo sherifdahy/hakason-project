@@ -15,3 +15,4 @@ D:\Hakathon\back-end\App.DAL\obj\Release\net10.0\refint\App.DAL.dll
 D:\Hakathon\back-end\App.DAL\obj\Release\net10.0\App.DAL.pdb
 D:\Hakathon\back-end\App.DAL\obj\Release\net10.0\App.DAL.genruntimeconfig.cache
 D:\Hakathon\back-end\App.DAL\obj\Release\net10.0\ref\App.DAL.dll
+D:\Hakathon\back-end\App.DAL\obj\Release\net10.0\App.DAL.sourcelink.json

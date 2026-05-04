@@ -17,16 +17,23 @@ public class ApplicationRoleConfig : IEntityTypeConfiguration<ApplicationRole>
         builder.HasData(new ApplicationRole()
         {
             Id = DefaultRoles.Admin.Id,
-            Name = DefaultRoles.Admin.name,
-            NormalizedName = DefaultRoles.Admin.name.ToUpper(),
+            Name = DefaultRoles.Admin.Name,
+            NormalizedName = DefaultRoles.Admin.Name.ToUpper(),
             ConcurrencyStamp = DefaultRoles.Admin.ConcurrencyStamp,
         },
         new ApplicationRole()
         {
-            Id = DefaultRoles.Client.Id,
-            Name = DefaultRoles.Client.name,
-            NormalizedName = DefaultRoles.Client.name.ToUpper(),
-            ConcurrencyStamp = DefaultRoles.Client.ConcurrencyStamp
+            Id = DefaultRoles.Parent.Id,
+            Name = DefaultRoles.Parent.Name,
+            NormalizedName = DefaultRoles.Parent.Name.ToUpper(),
+            ConcurrencyStamp = DefaultRoles.Parent.ConcurrencyStamp
+        },
+        new ApplicationRole()
+        {
+            Id = DefaultRoles.Child.Id,
+            Name = DefaultRoles.Child.Name,
+            NormalizedName = DefaultRoles.Child.Name.ToUpper(),
+            ConcurrencyStamp = DefaultRoles.Child.ConcurrencyStamp
         });
     }
 }

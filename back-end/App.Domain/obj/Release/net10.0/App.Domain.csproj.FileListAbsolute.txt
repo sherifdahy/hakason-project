@@ -10,3 +10,4 @@ D:\Hakathon\back-end\App.Domain\obj\Release\net10.0\App.Domain.dll
 D:\Hakathon\back-end\App.Domain\obj\Release\net10.0\refint\App.Domain.dll
 D:\Hakathon\back-end\App.Domain\obj\Release\net10.0\App.Domain.pdb
 D:\Hakathon\back-end\App.Domain\obj\Release\net10.0\ref\App.Domain.dll
+D:\Hakathon\back-end\App.Domain\obj\Release\net10.0\App.Domain.sourcelink.json

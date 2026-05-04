@@ -15,3 +15,4 @@ D:\Hakathon\back-end\App.BLL\obj\Release\net10.0\App.BLL.dll
 D:\Hakathon\back-end\App.BLL\obj\Release\net10.0\refint\App.BLL.dll
 D:\Hakathon\back-end\App.BLL\obj\Release\net10.0\App.BLL.pdb
 D:\Hakathon\back-end\App.BLL\obj\Release\net10.0\ref\App.BLL.dll
+D:\Hakathon\back-end\App.BLL\obj\Release\net10.0\App.BLL.sourcelink.json

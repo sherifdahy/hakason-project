@@ -1,7 +1,5 @@
-﻿using App.Domain.Entities.Profiles;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using App.Domain.Entities.Persons;
 
 namespace App.Domain.Entities.Business;
 
@@ -10,7 +8,7 @@ public class BlockedApp
     public int Id { get; set; }
 
     public int ChildId { get; set; }
-    public virtual ChildProfile Child { get; set; } = default!;
+    public virtual Child Child { get; set; } = default!;
 
     public string AppName { get; set; } = string.Empty;
     public DateTime BlockedAt { get; set; } = DateTime.UtcNow;

@@ -22,6 +22,59 @@ namespace App.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("App.Domain.Entities.Business.Invitation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Attempts")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChildEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ChildName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreatedBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("HashedCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAccepted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UpdatedBy")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.HasIndex("ChildEmail", "IsAccepted");
+
+                    b.ToTable("Invitations");
+                });
+
             modelBuilder.Entity("App.Domain.Entities.Identity.ApplicationRole", b =>
                 {
                     b.Property<int>("Id")
@@ -63,8 +116,15 @@ namespace App.DAL.Migrations
                         {
                             Id = 2,
                             ConcurrencyStamp = "BFE4CA72-A6AB-46C0-8713-51AD68AE3CEC",
-                            Name = "Client",
-                            NormalizedName = "CLIENT"
+                            Name = "Parent",
+                            NormalizedName = "PARENT"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ConcurrencyStamp = "01C89763-4DC4-43B4-948B-E1D792271DA1",
+                            Name = "Child",
+                            NormalizedName = "CHILD"
                         });
                 });
 
@@ -126,9 +186,6 @@ namespace App.DAL.Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
-                    b.Property<byte>("Type")
-                        .HasColumnType("tinyint");
-
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -162,9 +219,39 @@ namespace App.DAL.Migrations
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "A5B8A111-84DE-4C03-A72D-602FE42D30FA",
                             TwoFactorEnabled = false,
-                            Type = (byte)0,
                             UserName = "admin@hakason.com"
                         });
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Persons.Child", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ParentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalPoints")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Children");
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Persons.Parent", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("Parents");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -277,12 +364,53 @@ namespace App.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("App.Domain.Entities.Business.Invitation", b =>
+                {
+                    b.HasOne("App.Domain.Entities.Persons.Parent", "Parent")
+                        .WithMany()
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Parent");
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Persons.Child", b =>
+                {
+                    b.HasOne("App.Domain.Entities.Persons.Parent", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("App.Domain.Entities.Identity.ApplicationUser", "User")
+                        .WithOne("Child")
+                        .HasForeignKey("App.Domain.Entities.Persons.Child", "UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Parent");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Persons.Parent", b =>
+                {
+                    b.HasOne("App.Domain.Entities.Identity.ApplicationUser", "User")
+                        .WithOne("Parent")
+                        .HasForeignKey("App.Domain.Entities.Persons.Parent", "UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("App.Domain.Entities.Identity.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -291,7 +419,7 @@ namespace App.DAL.Migrations
                     b.HasOne("App.Domain.Entities.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -300,7 +428,7 @@ namespace App.DAL.Migrations
                     b.HasOne("App.Domain.Entities.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -309,13 +437,13 @@ namespace App.DAL.Migrations
                     b.HasOne("App.Domain.Entities.Identity.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Domain.Entities.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -324,8 +452,22 @@ namespace App.DAL.Migrations
                     b.HasOne("App.Domain.Entities.Identity.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Identity.ApplicationUser", b =>
+                {
+                    b.Navigation("Child")
+                        .IsRequired();
+
+                    b.Navigation("Parent")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("App.Domain.Entities.Persons.Parent", b =>
+                {
+                    b.Navigation("Children");
                 });
 #pragma warning restore 612, 618
         }

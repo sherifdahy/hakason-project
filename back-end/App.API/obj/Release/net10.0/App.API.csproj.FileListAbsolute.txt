@@ -171,3 +171,10 @@ D:\Hakathon\back-end\App.API\obj\Release\net10.0\ref\App.API.dll
 D:\Hakathon\back-end\App.API\obj\Release\net10.0\App.API.MvcApplicationPartsAssemblyInfo.cs
 D:\Hakathon\back-end\App.API\bin\Release\net10.0\Mapster.dll
 D:\Hakathon\back-end\App.API\bin\Release\net10.0\Mapster.Core.dll
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\Templates\EmailConfirmation.html
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\BouncyCastle.Cryptography.dll
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\MailKit.dll
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\MimeKit.dll
+D:\Hakathon\back-end\App.API\obj\Release\net10.0\App.API.sourcelink.json
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\Templates\ChildInvitation.html
+D:\Hakathon\back-end\App.API\bin\Release\net10.0\Templates\ChildJoined.html

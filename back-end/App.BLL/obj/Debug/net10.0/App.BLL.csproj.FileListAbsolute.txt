@@ -1,8 +1,3 @@
-D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.csproj.AssemblyReference.cache
-D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.AssemblyInfoInputs.cache
-D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.AssemblyInfo.cs
-D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.csproj.CoreCompileInputs.cache
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.BLL.deps.json
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.BLL.dll
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.BLL.pdb
@@ -10,6 +5,12 @@ D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.DAL.dll
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.Domain.dll
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.DAL.pdb
 D:\Hakathon\back-end\App.BLL\bin\Debug\net10.0\App.Domain.pdb
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.csproj.AssemblyReference.cache
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.AssemblyInfoInputs.cache
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.AssemblyInfo.cs
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.csproj.CoreCompileInputs.cache
+D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.sourcelink.json
 D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.csproj.Up2Date
 D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\App.BLL.dll
 D:\Hakathon\back-end\App.BLL\obj\Debug\net10.0\refint\App.BLL.dll
